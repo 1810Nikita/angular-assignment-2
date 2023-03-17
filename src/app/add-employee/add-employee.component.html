@@ -1,0 +1,83 @@
+<h1>Add Employee</h1>
+<div class="emp-form">
+    <form [formGroup]="EmployeeForm" (ngSubmit)="onSubmit()" >
+
+            <!--emp id-->
+            <div>
+                <label for="name">Emp id:</label>
+                <input type="text" formControlName="empid" class="form-control" placeholder="Enter Id:">
+            </div>
+
+            <!--Name-->
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Enter Name:">
+            </div>
+        
+            <!--Contact-->
+            <div>
+                <label for="name">Contact:</label>
+                <input type="text" formControlName="contact" class="form-control" placeholder="Enter Contact:">
+            </div>
+            <!--Email-->
+            <div>
+                <label for="name">Email:</label>
+                <input type="text" formControlName="email" class="form-control" placeholder="Enter Email:">
+            </div>
+        
+        
+            <!--skills-->
+            <div formArrayName="skills">
+                <div class="container-skill">
+                <label for="skils">Skills:</label>
+                </div>
+                <button type="button" class="add-skill" (click)="addSkill()">Add skill +</button><br />
+              
+                <ng-container *ngFor="let skill of skills.controls; index as i">
+                  <div style="display: flex" [formGroupName]="i">
+                    <div class="skill">
+                      <input type="text"placeholder="Add Skills:" formControlName="skill">
+                    </div>
+                    <div class="experience">
+                      <select formControlName="experience">
+                        <option value="" disabled selected hidden>select Experience</option>
+                        <option value="fresher">Fresher</option>
+                        <option value="1 year">1 year</option>
+                        <option value="2 year">2 year</option>
+                        <option value="3 year">3 year</option>
+                        <option value="4 year">4 year</option>
+                        <option value="5 year">5 year</option>
+                      </select>
+                    </div>
+                    
+                    <button *ngIf="skills.length > 1" (click)="deleteSkills(i)" class="a-skill">
+                      <i class="fas fa-trash" style="font-size: 1.5rem;color:white;"></i>
+                    </button>
+                  </div>
+                </ng-container>
+              </div>
+            <!--Gender-->
+
+            <div>
+                <td>
+                    <p>Gender</p>
+                        <input type="radio" name="gender" value="male" formControlName="gender">
+                         <label for="html">Male</label>
+                         <input type="radio" id="female" name="gender" value="Female" formControlName="gender">
+                         <label for="css">Female</label>
+                </td>
+                
+            </div>
+        
+
+        
+        <!--Submit-->
+        <div><button type="submit" class="btn btn-success">Submit</button></div>
+    
+    </form>
+    
+    
+
+</div>
+
+

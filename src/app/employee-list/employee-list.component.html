@@ -1,0 +1,53 @@
+<!--Navbar and button for routing to the add employee page-->
+<nav>
+  <button class="add-emp"><a routerLink="/add-emp"> Add employee</a></button>
+  
+</nav>
+
+<br><br><br>
+
+<!--Table -->
+<div>
+  <!--Table head-->
+  <table class="emp-table">
+    <thead>
+      <tr>
+        <th>emp id</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Skills</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <!--Table body-->
+    <tbody>
+      <tr *ngFor="let emp of employee; ">
+        <td>{{emp.empid}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.contact}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.gender}}</td>
+
+        <td>
+          <ng-container *ngFor="let skill of emp.skills; let i = index">
+            {{emp.skills[i].skill}}, Exp:{{emp.skills[i].experience}}
+          </ng-container>
+        </td>
+
+        <td>
+            <!--edit section-->
+            <button class="edit-data" (click)="edit(emp.empid)">
+              <i class="fas fa-pen" style="font-size: 1rem;"></i>
+            </button>
+
+              <!--delete section-->
+            <button class="d-delete" (click)="ondelete(emp.empid)">
+                <i class="fas fa-trash" style="font-size: 1rem;"></i>
+            </button>
+          </td>    
+      </tr>
+    </tbody>
+</table>
+</div>
