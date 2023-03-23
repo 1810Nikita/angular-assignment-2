@@ -15,64 +15,60 @@
       "id": 1
     },
     {
-      "empid": "2",
-      "name": "niki",
-      "contact": "456789",
-      "email": "hjkiu",
-      "gender": "male",
+      "empid": "6",
+      "name": "",
+      "contact": "",
+      "email": "",
+      "gender": "",
       "skills": [
         {
-          "skill": "py",
-          "experience": "4 year"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "empid": "3",
-      "name": "nik",
-      "contact": "567",
-      "email": "c",
-      "gender": "male",
-      "skills": [
-        {
-          "skill": "c",
-          "experience": "1 year"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "empid": "4",
-      "name": "k",
-      "contact": "7",
-      "email": "k",
-      "gender": "Female",
-      "skills": [
-        {
-          "skill": "py",
-          "experience": "1 year"
-        },
-        {
-          "skill": "c",
-          "experience": "4 year"
+          "skill": "",
+          "experience": ""
         }
       ],
       "id": 4
     },
     {
-      "empid": "5",
-      "name": "nik",
-      "contact": "67",
-      "email": "1018nikitakumari@gmail.com",
-      "gender": "Female",
+      "empid": "7",
+      "name": "",
+      "contact": "",
+      "email": "",
+      "gender": "",
       "skills": [
         {
-          "skill": "g",
-          "experience": "2 year"
+          "skill": "",
+          "experience": ""
         }
       ],
-      "id": 5
+      "id": 9
+    },
+    {
+      "empid": "10",
+      "name": "",
+      "contact": "",
+      "email": "",
+      "gender": "",
+      "skills": [
+        {
+          "skill": "",
+          "experience": ""
+        }
+      ],
+      "id": 12
+    },
+    {
+      "empid": "11",
+      "name": "",
+      "contact": "",
+      "email": "",
+      "gender": "",
+      "skills": [
+        {
+          "skill": "",
+          "experience": ""
+        }
+      ],
+      "id": 13
     }
   ]
 }

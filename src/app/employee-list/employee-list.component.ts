@@ -34,12 +34,27 @@ export class EmployeeListComponent implements OnInit {
   }
 
 
-  ondelete(id:Number){
-    this.api.deleteRegisteredUser(id).subscribe((res) =>{
-      this.getRegisterdUser()
-      
-    })
+  ondelete(index: number, name: string) {
+    if (confirm("Are you sure you want to delete " + name + "?")) {
+      this.api.deleteRegisteredUser(index).subscribe(() => {
+        const message = `The Employee ${name} is deleted successfully.`;
+        //alert(message);
+        this.getRegisterdUser();
+        this.showMessage(message, 2000);
+      });
+    }
   }
+  
+  showMessage(message: string, duration: number) {
+    const messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    messageElement.classList.add('message');
+    document.body.appendChild(messageElement);
+    setTimeout(() => {
+      messageElement.remove();
+    }, duration);
+  }
+  
       
 
 
